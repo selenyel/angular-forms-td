@@ -26,9 +26,13 @@
               name="email"
               required
               email
+              #customEmailLocalReference = 'ngModel'
             >
+            <span
+              class="help-block"
+              *ngIf="!customEmailLocalReference.valid && customEmailLocalReference.touched"
+            > Please enter a valid email!</span>
           </div>
-          <p *ngIf="">Please enter a valid value!</p>
         </div>
         <div class="form-group">
           <label for="secret">Secret Questions</label>
